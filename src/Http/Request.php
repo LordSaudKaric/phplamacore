@@ -58,7 +58,7 @@ class Request
         
         self::$full_url     = $request_uri;
         
-        self::$url          = parse_url($request_uri)['path'];
+        self::$url          = parse_url($request_uri)['path'] ?: '/';
         self::$query_string = parse_url($request_uri)['query'];
 
     }
